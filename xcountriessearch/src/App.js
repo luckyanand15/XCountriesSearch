@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Styles from "./App.module.css";
+import "./App.css";
 import axios from "axios";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   );
   return (
     <div>
-      <div className={Styles.search}>
+      <div className="search">
         <input
           type="text"
           placeholder="Search for countries..."
@@ -32,10 +32,10 @@ function App() {
         />
       </div>
       {filterData.length > 0 || searchData.length > 0 ? (
-        <div className={Styles.wrapper}>
+        <div className="wrapper">
           {filterData.map((country) => {
             return (
-              <div className={Styles.countryCard}>
+              <div className="countryCard">
                 <img src={country.flags.png} alt={country.name.common} />
                 <p>{country.name.common}</p>
               </div>
@@ -43,10 +43,10 @@ function App() {
           })}
         </div>
       ) : (
-        <div className={Styles.wrapper}>
+        <div className="wrapper">
           {data.map((country) => {
             return (
-              <div className={Styles.countryCard}>
+              <div className="countryCard">
                 <img src={country.flags.png} alt={country.name.common} />
                 <p>{country.name.common}</p>
               </div>
