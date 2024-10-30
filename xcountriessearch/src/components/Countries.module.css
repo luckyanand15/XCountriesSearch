@@ -10,6 +10,9 @@
     margin: 10px;
 }
 
+.countryCard h5{
+    padding: 10px;
+}
 .countryCard img{
     height: 100px;
     width: 100px;
