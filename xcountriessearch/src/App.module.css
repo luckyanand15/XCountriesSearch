@@ -1,0 +1,19 @@
+.countryCard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  background-color: #F8F8F8;
+  padding: 8px 0px;
+}
+
+.search input{
+  width: 60%;
+  height: 30px;
+  margin: 0px auto;
+  padding: 10px;
+}
