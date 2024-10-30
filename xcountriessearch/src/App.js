@@ -48,7 +48,7 @@ function App() {
         {filterData.map((country) => {
           return (
             <div key={`${country.cca3}`}>
-              <Countries name={country.name.common} flag={country.flags.png} abbr={country.tld}/>
+              <Countries name={country.name.common} flag={country.flags.png}/>
             </div>
           );
         })}
@@ -58,7 +58,7 @@ function App() {
         {data.map((country) => {
           return (
             <div key={`${country.cca3}`}>
-              <Countries name={country.name.common} flag={country.flags.png} abbr={country.tld}/>
+              <Countries name={country.name.common} flag={country.flags.png}/>
             </div>
           );
         })}
