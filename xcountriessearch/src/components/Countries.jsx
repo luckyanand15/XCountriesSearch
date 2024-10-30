@@ -5,7 +5,7 @@ const Countries = ({name,flag}) => {
   return (
     <div className={Styles.countryCard}>
         <img src={flag} alt={name}/>
-        <h5>{name}</h5>
+        <p>{name}</p>
     </div>
   )
 }

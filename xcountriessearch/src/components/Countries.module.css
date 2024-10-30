@@ -10,8 +10,9 @@
     margin: 10px;
 }
 
-.countryCard h5{
+.countryCard p{
     padding: 10px;
+    font-weight: 700;
 }
 .countryCard img{
     height: 100px;
