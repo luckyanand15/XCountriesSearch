@@ -44,7 +44,7 @@ function App() {
       </div>
       {filterData.length>0 || searchData.length>0 ? 
       (
-        <div className={Styles.countryCard}>
+        <div className={Styles.wrapper}>
         {filterData.map((country) => {
           return (
             <div key={`${country.cca3}`}>
@@ -54,7 +54,7 @@ function App() {
         })}
       </div>
       ):(
-        <div className={Styles.countryCard}>
+        <div className={Styles.wrapper}>
         {data.map((country) => {
           return (
             <div key={`${country.cca3}`}>
