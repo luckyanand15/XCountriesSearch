@@ -5,7 +5,6 @@ import Countries from "./components/Countries";
 
 function App() {
   const [data, setData] = useState([]);
-  const [filterData, setFilterData] = useState([]);
   const [searchData,setSearchData] = useState("");
   
   useEffect(() => {
@@ -20,23 +19,7 @@ function App() {
     getCountries();
   }, []);
 
-  useEffect(()=>{
-    const performSearch = async (name)=>{
-      if (name === "") {
-        setFilterData([]);
-        return;
-      }
-      try {
-        const resp = await axios.get(`https://restcountries.com/v3.1/name/${name}`);
-        setFilterData(resp.data);
-      } catch (err) {
-        console.error("Error fetching data: ", err);
-        setFilterData([]);
-        return;
-      }
-    }
-    performSearch(searchData);
-  },[searchData])
+  const filterData = data.filter((country)=>country.name.common.toLowerCase().includes(searchData.toLowerCase()));
   return (
     <div>
       <div className={Styles.search}>
